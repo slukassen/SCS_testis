@@ -37,11 +37,11 @@ plot_pc_variance_explained(gbm_cds, return_all = F)
 # calculate dimensionality reduction by t-stochastic neighbor embedding (t-SNE)
 # reduce down to two components
 # use 6 PCs as input
-gbm_cds_disp <- reduceDimension(gbm_cds, max_components = 2, num_dim = 6,
+gbm_cds <- reduceDimension(gbm_cds, max_components = 2, num_dim = 6,
                         reduction_method = 'tSNE', verbose = T)
 
 # cluster cells into 9 clusters and plot them
-gbm_cds_disp <- clusterCells(gbm_cds, num_clusters = 10)
+gbm_cds <- clusterCells(gbm_cds, num_clusters = 10)
 plot_cell_clusters(gbm_cds, 1, 2)
 
 # Pseudotime calculation
